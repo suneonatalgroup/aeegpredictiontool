@@ -4,10 +4,6 @@ setDT(d)
 d[, sid := as.character(sid)]
 d <- na.omit(d)
 
-## both seizure types
-
-d[, both_seizure_types := (electrographic_seizure & clinical_seizure)]
-
 ## aEEG mean
 
 d[, aEEG_mean := 1 / 14 * (aEEG_p01 + aEEG_p02 + aEEG_p03 + aEEG_p04 +
